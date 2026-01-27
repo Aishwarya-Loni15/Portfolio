@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Creative Portfolio | Computer Science Student</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+}
+
+/* ===== HEADER ===== */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    padding:15px 40px;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h2{ color:#00e5ff; }
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* ===== HERO ===== */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 20px 40px;
+    text-align:center;
+}
+
+.hero-box{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:22px;
+    padding:50px;
+    max-width:900px;
+}
+
+/* PROFILE IMAGE */
+.profile-img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:4px solid #00e5ff;
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn{
+    padding:12px 32px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#00e5ff,#00bcd4);
+    color:#fff;
+    text-decoration:none;
+    display:inline-block;
+    margin:8px;
+}
+
+/* SECTIONS */
+section{ padding:90px 20px; }
+
+.section-box{
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+h2 span{ color:#00e5ff; }
+
+/* SKILLS */
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    padding:12px 22px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.15);
+}
+
+/* PROJECTS */
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+.project h3{
+    color:#00e5ff;
+}
+
+/* ===== MODAL ===== */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(6px);
+    z-index:2000;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:#102a43;
+    padding:30px;
+    border-radius:18px;
+    max-width:600px;
+    width:90%;
+    animation:fadeIn 0.4s ease;
+}
+
+.modal-content h3{
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+.modal-content ul{
+    margin-left:20px;
+    margin-top:10px;
+}
+
+.close-btn{
+    float:right;
+    font-size:22px;
+    cursor:pointer;
+    color:#00e5ff;
+}
+
+/* CERTIFICATES */
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.certificate{
+    background:rgba(255,255,255,0.12);
+    padding:15px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.certificate img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* CONTACT */
+.contact{ text-align:center; }
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.4);
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0;transform:scale(0.9);}
+    to{opacity:1;transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>Aishwarya Loni</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+<div class="hero-box">
+<img src="aishPhoto.jpeg" class="profile-img">
+<h1>Hi, I'm <span style="color:#00e5ff;">Aishwarya Loni</span></h1>
+<p>Computer Science Student | Web Developer</p>
+<a href="resuum1.pdf" download class="btn">Download Resume</a>
+<a href="#contact" class="btn">Contact Me</a>
+</div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="section-box">
+<h2>My <span>Skills</span></h2>
+<div class="skills-grid">
+<div class="skill">C / C++</div>
+<div class="skill">Java</div>
+<div class="skill">Python</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">MySQL</div>
+<div class="skill">Git & GitHub</div>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="section-box">
+<h2>My <span>Projects</span></h2>
+
+<div class="projects-grid">
+<div class="project" onclick="openProject('crop')">
+<h3>Smart Crop Advisory System</h3>
+<p>AI-based crop recommendation platform.</p>
+</div>
+
+<div class="project" onclick="openProject('ecommerce')">
+<h3>Pulses E-Commerce Website</h3>
+<p>Online agricultural product marketplace.</p>
+</div>
+
+<div class="project" onclick="openProject('portfolio')">
+<h3>Portfolio Website</h3>
+<p>Modern animated personal portfolio.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="projectModal">
+<div class="modal-content" id="modalContent">
+<span class="close-btn" onclick="closeModal()">✖</span>
+</div>
+</div>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+<div class="section-box">
+<h2>My <span>Certificates</span></h2>
+<div class="certificate-grid">
+<div class="certificate"><img src="Reactjs.jpg"></div>
+<div class="certificate"><img src="nptel.png"></div>
+<div class="certificate"><img src="udemy.png"></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<!-- CONTACT -->
+<section id="contact">
+<div class="section-box contact">
+<h2>Get in <span>Touch</span></h2>
+
+<p>
+📧 Email:
+<a href="mailto:aishwaryaloni872@gmail.com" style="color:#00e5ff;">
+aishwaryaloni872@gmail.com
+</a>
+</p>
+
+<p>
+💻 GitHub:
+<a href="https://github.com/Aishwarya-Loni-15" target="_blank" style="color:#00e5ff;">
+github.com/Aishwarya-Loni-15
+</a>
+</p>
+
+<p>
+🔗 LinkedIn:
+<a href="https://www.linkedin.com/in/aishwarya-loni-b48a602a2" target="_blank" style="color:#00e5ff;">
+linkedin.com/in/aishwaryaloni
+</a>
+</p>
+
+</div>
+</section>
+
+
+<footer>© 2026 Aishwarya Loni</footer>
+
+<script>
+function openProject(project){
+    const modal = document.getElementById("projectModal");
+    const content = document.getElementById("modalContent");
+
+    let html = `<span class="close-btn" onclick="closeModal()">✖</span>`;
+
+    if(project === "crop"){
+        html += `
+        <h3>Smart Crop Advisory System</h3>
+        <p><b>Description:</b> Helps farmers select best crops using soil & weather data.</p>
+        <p><b>Technologies:</b> Python, ML, APIs</p>
+        <ul>
+            <li>Weather-based crop suggestion</li>
+            <li>Improves yield</li>
+            <li>User-friendly design</li>
+        </ul>`;
+    }
+
+    if(project === "ecommerce"){
+        html += `
+        <h3>Pulses E-Commerce Website</h3>
+        <p><b>Description:</b> Online platform to buy & sell pulses.</p>
+        <p><b>Technologies:</b> HTML, CSS, JS, MySQL</p>
+        <ul>
+            <li>User login & cart</li>
+            <li>Order management</li>
+            <li>Secure checkout</li>
+        </ul>`;
+    }
+
+    if(project === "portfolio"){
+        html += `
+        <h3>Portfolio Website</h3>
+        <p><b>Description:</b> Personal responsive portfolio website.</p>
+        <p><b>Technologies:</b> HTML, CSS, JavaScript</p>
+        <ul>
+            <li>Modern UI</li>
+            <li>Animated sections</li>
+            <li>Netlify deployment</li>
+        </ul>`;
+    }
+
+    content.innerHTML = html;
+    modal.style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("projectModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
